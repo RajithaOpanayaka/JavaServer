@@ -5,11 +5,11 @@
          version="3.1">
     <servlet>
         <servlet-name>Student</servlet-name>
-        <servlet-class>com.example.web.Student</servlet-class>
+        <servlet-class>com.example.web.StudentController</servlet-class>
     </servlet> 
     <servlet>
         <servlet-name>Subject</servlet-name>
-        <servlet-class>com.example.web.Subject</servlet-class>
+        <servlet-class>com.example.web.SubjectController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Student</servlet-name>

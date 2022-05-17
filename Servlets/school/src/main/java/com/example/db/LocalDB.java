@@ -2,14 +2,18 @@ package com.example.db;
 
 import com.example.model.student.Student;
 import com.example.model.subject.Subject;
+import java.util.*;
 
 public class LocalDB implements DB{
 
     private static LocalDB db;
-    private Student student;
-    private Subject subject;
+    private Hashtable<String,Student> students;
+    private Hashtable<String,Subject> subjects;
 
-    private LocalDB(){}
+    private LocalDB(){
+        this.students = new Hashtable<String,Student>();
+        this.subjects = new Hashtable<String,Subject>();
+    }
 
     public static LocalDB getInstance(){
         if(db == null){
@@ -17,18 +21,22 @@ public class LocalDB implements DB{
         }
         return db;
     }
-    public void addStudent(Student student){
+    public void addStudent(Student student,String id){
+        this.students.put(id,student);
     }
-    public void removeStudent(int id){
+    public void removeStudent(String id){
+        this.students.remove(id);
     }
-    public Student getStudent(int id){
-        return this.student;
+    public Student getStudent(String id){
+        return this.students.get(id);
     }
-    public void addSubject(Subject subject){
+    public void addSubject(Subject subject,String id){
+        this.subjects.put(id,subject);
     }
-    public void removeSubject(int id){
+    public void removeSubject(String id){
+        this.subjects.remove(id);
     }
-    public Subject getSubject(int id){
-        return this.subject;
+    public Subject getSubject(String id){
+        return this.subjects.get(id);
     }
 }

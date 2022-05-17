@@ -4,10 +4,10 @@ import com.example.model.student.Student;
 import com.example.model.subject.Subject;
 
 public interface DB{
-    public abstract void addStudent(Student student);
-    public abstract void removeStudent(int id);
-    public abstract Student getStudent(int id);
-    public abstract void addSubject(Subject subject);
-    public abstract void removeSubject(int id);
-    public abstract Subject getSubject(int id);
+    public abstract void addStudent(Student student,String id);
+    public abstract void removeStudent(String id);
+    public abstract Student getStudent(String id);
+    public abstract void addSubject(Subject subject,String id);
+    public abstract void removeSubject(String id);
+    public abstract Subject getSubject(String id);
 }
