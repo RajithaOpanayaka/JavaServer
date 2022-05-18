@@ -10,10 +10,17 @@
             <input type="text" name="id" placeholder="id">
             <button>Search</button>
         </form>
-        <h4>Remove student</h4>
-        <form method="DELETE" action="student.do">
+        <h4><a href="addSubject.jsp">Register Subject</a></h4>
+        <h4>Enroll Student</h4>
+        <form method="POST" action="enroll.do">
+            <input type="text" name="subject" placeholder="subject">
+            <input type="text" name="student" placeholder="student">
+            <button>Enroll</button>
+        </form>
+        <h4>Search Subject</h4>
+        <form method="GET" action="enroll.do">
             <input type="text" name="id" placeholder="id">
-            <button>Remove</button>
+            <button>Search</button>
         </form>
     </body>
 </html>

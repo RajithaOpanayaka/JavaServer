@@ -11,6 +11,10 @@
         <servlet-name>Subject</servlet-name>
         <servlet-class>com.example.web.SubjectController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Enroll</servlet-name>
+        <servlet-class>com.example.web.EnrollController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Student</servlet-name>
         <url-pattern>/student.do</url-pattern>
@@ -18,5 +22,9 @@
     <servlet-mapping>
         <servlet-name>Subject</servlet-name>
         <url-pattern>/subject.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Enroll</servlet-name>
+        <url-pattern>/enroll.do</url-pattern>
     </servlet-mapping>
 </web-app>
